@@ -1,6 +1,3 @@
-Here is the complete `README.md` file that you can copy directly:
-
-```markdown
 # Todo List App
 
 This is a **real-time collaborative Todo List application** built with React, Redux, WebSockets, and CSS. It allows multiple users to add, edit, and remove tasks, with all changes synchronized in real-time.
@@ -136,8 +133,6 @@ This will launch the app at `http://localhost:3000`. Open it in your browser to 
 Open multiple browser tabs or different browsers to see the real-time collaborative functionality in action.
 
 ## 📂 Project Structure
-
-```
 todoList/
 ├── public/              # Public assets
 ├── src/
@@ -152,7 +147,7 @@ todoList/
 ├── README.md            # Project documentation
 ├── package.json         # npm dependencies and scripts
 └── package-lock.json    # Version-locked dependency tree
-```
+
 
 ## 📝 Usage
 
@@ -202,8 +197,5 @@ For any questions, feel free to reach out to:
 
 - **Nish Shah** - [GitHub Profile](https://github.com/shahnish28)
 
----
-
 Thank you for checking out this project! Happy coding! 🎉
-```
 
