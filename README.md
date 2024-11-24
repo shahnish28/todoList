@@ -55,49 +55,10 @@ npm install
 
 To enable real-time functionality, you need a WebSocket server running. If you don't have one already, follow these steps to set up a basic server:
 
-1. In the project root directory, create a new file called `server.js`:
+1. In the project root directory, access the file called `server.js`:
 
-   ```js
-   const express = require("express");
-   const http = require("http");
-   const socketIo = require("socket.io");
-
-   const app = express();
-   const server = http.createServer(app);
-   const io = socketIo(server);
-
-   // Listen for WebSocket connections
-   io.on("connection", (socket) => {
-     console.log("A user connected");
-
-     // Send initial todos when a new user connects
-     socket.emit("initialTodos", []);
-
-     // Listen for 'addTodo' event
-     socket.on("addTodo", (todo) => {
-       io.emit("todoAdded", todo);
-     });
-
-     // Listen for 'removeTodo' event
-     socket.on("removeTodo", (id) => {
-       io.emit("todoRemoved", id);
-     });
-
-     // Listen for 'updateTodo' event
-     socket.on("updateTodo", (todo) => {
-       io.emit("todoUpdated", todo);
-     });
-
-     // Handle user disconnect
-     socket.on("disconnect", () => {
-       console.log("A user disconnected");
-     });
-   });
-
-   // Start the server
-   server.listen(5000, () => {
-     console.log("Server is running on port 5000");
-   });
+   ```bash
+   cd backend
    ```
 
 2. Run the WebSocket server:
@@ -114,7 +75,7 @@ Ensure the WebSocket connection is correctly set up in your React app. In the `s
 import io from "socket.io-client";
 
 // Connect to the WebSocket server
-const socket = io("http://localhost:5000");
+const socket = io("http://localhost:4000");
 
 export default socket;
 ```
