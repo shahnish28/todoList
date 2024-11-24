@@ -69,7 +69,7 @@ const App = () => {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.text}
+            <p className="text">{todo.text}</p>
             <button className="red" onClick={() => handleRemoveTodo(todo.id)}>
               Remove
             </button>

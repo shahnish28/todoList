@@ -57,6 +57,7 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
   background-color: red;
+  margin-right: 20px;
   color: whitesmoke;
 }
 .blue {
@@ -101,11 +102,13 @@ li {
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .todo-text {
   flex: 1;
