@@ -1,0 +1,27 @@
+.activity-log {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    background-color: #f9f9f9;
+  }
+  
+  .activity-log h2 {
+    margin-bottom: 10px;
+  }
+  
+  .activity-log ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .activity-log li {
+    margin-bottom: 5px;
+  }
+  
+  .timestamp {
+    color: #888;
+    margin-right: 5px;
+  }
+  

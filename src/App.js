@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo, removeTodo, updateTodo, setTodos } from "./redux/actions";
 import socket from "./socket";
+import ActivityLog from "./components/ActivityLog"; // Import the Activity Log component
 import "./App.css";
 
 const App = () => {
   const [input, setInput] = useState("");
-  const todos = useSelector((state) => state.todos.todos) || []; // Ensure it's an array
+  const todos = useSelector((state) => state.todos.todos) || [];
   const dispatch = useDispatch();
 
   useEffect(() => {
     socket.on("initialTodos", (initialTodos) => {
-      console.log("Received initial todos:", initialTodos); // Debug
       dispatch(setTodos(initialTodos));
     });
 
@@ -27,7 +27,6 @@ const App = () => {
       dispatch(updateTodo(updatedTodo));
     });
 
-    // Clean up WebSocket listeners on component unmount
     return () => {
       socket.off("initialTodos");
       socket.off("todoAdded");
@@ -79,6 +78,9 @@ const App = () => {
           </li>
         ))}
       </ul>
+
+      {/* Include the Activity Log component */}
+      <ActivityLog />
     </div>
   );
 };
