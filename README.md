@@ -135,20 +135,36 @@ Open multiple browser tabs or different browsers to see the real-time collaborat
 
 ## 📂 Project Structure
 ```
-todoList/
-├── public/              # Public assets
+REACT-TODO-APP/
+├── backend/
+│   └── server.js
+├── node_modules/
+├── public/
 ├── src/
-│   ├── components/      # React components
-│   ├── redux/           # Redux store, actions, and reducers
-│   ├── App.js           # Main React component
-│   ├── index.js         # Entry point for React app
-│   ├── socket.js        # WebSocket connection setup
-│   └── styles.css       # CSS styling
-├── server.js            # WebSocket server (if applicable)
-├── .gitignore           # Git ignore file
-├── README.md            # Project documentation
-├── package.json         # npm dependencies and scripts
-└── package-lock.json    # Version-locked dependency tree
+│   ├── components/
+│   ├── redux/
+│   │   ├── actions/
+│   │   │   └── todoActions.js
+│   │   ├── reducers/
+│   │   │   ├── index.js
+│   │   │   └── todoReducer.js
+│   │   ├── actions.js
+│   │   └── store.js
+│   ├── utils/
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── socket.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+
 ```
 
 ## 📝 Usage
